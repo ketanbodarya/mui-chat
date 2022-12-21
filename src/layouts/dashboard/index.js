@@ -79,10 +79,10 @@ const DashboardLayout = () => {
             </Box>
 
             <Stack sx={{ width: "max-content" }} direction="column" alignItems="center" spacing={3}>
-              {Nav_Buttons.map((el) =>
+              {Nav_Buttons.map((el, idx) =>
 
                 el.index === selected ? (
-                  <Box sx={{ backgroundColor: theme.palette.primary.main, borderRadius: 1.5 }}>
+                  <Box key={idx} sx={{ backgroundColor: theme.palette.primary.main, borderRadius: 1.5 }}>
                     <IconButton sx={{ width: 'max-content', color: "#fff" }} key={el.index}>
                       {el.icon}
                     </IconButton>
